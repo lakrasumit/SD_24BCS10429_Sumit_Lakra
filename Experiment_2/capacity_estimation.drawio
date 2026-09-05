@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-09-10T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram name="Capacity Estimation" id="capacity-estimation">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageWidth="900" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Main Title -->
+        <mxCell id="maintitle" value="3. Capacity Estimation" style="text;html=1;fontSize=22;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="20" width="500" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="mainintro" value="Before designing the architecture, we estimate the expected traffic, storage, and bandwidth requirements. These estimations help us choose the right CDN, storage, database, cache, and scaling strategy." style="text;html=1;fontSize=12;align=left;verticalAlign=top;fontColor=#000000;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="55" width="750" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Assumptions Table Heading -->
+        <mxCell id="assumptheading" value="Assumptions" style="text;html=1;fontSize=15;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="300" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Assumptions Table: header -->
+        <mxCell id="a_h1" value="Parameter" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="130" width="350" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="a_h2" value="Assumption" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="130" width="350" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_r1c1" value="Registered Users" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="164" width="350" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="a_r1c2" value="300 Million" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="164" width="350" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_r2c1" value="Daily Active Users" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="198" width="350" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="a_r2c2" value="100 Million" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="198" width="350" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_r3c1" value="Daily Video Views" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="232" width="350" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="a_r3c2" value="1 Billion" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="232" width="350" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_r4c1" value="Average Video Size" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="266" width="350" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="a_r4c2" value="500 MB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="266" width="350" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a_r5c1" value="Read : Write Ratio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="350" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="a_r5c2" value="1000 : 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="350" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- 3.1 Storage Estimation -->
+        <mxCell id="s1title" value="3.1 Storage Estimation" style="text;html=1;fontSize=15;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="360" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s1intro" value="Assume around 100,000 new videos are uploaded every day, and the average video size is 500 MB." style="text;html=1;fontSize=12;align=left;verticalAlign=top;fontColor=#000000;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="388" width="750" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_h1" value="Step" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="422" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_h2" value="Value" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="422" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_r1c1" value="Daily Storage = 100,000 x 500 MB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="456" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_r1c2" value="50 TB / day" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="456" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_r2c1" value="Monthly Storage = 30 x 50 TB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="490" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_r2c2" value="1.5 PB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="490" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1_r3c1" value="Estimated Storage (excluding replicas and backups)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="524" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s1_r3c2" value="1.5 PB / month" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="524" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- 3.2 Bandwidth Estimation -->
+        <mxCell id="s2title" value="3.2 Bandwidth Estimation" style="text;html=1;fontSize=15;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="580" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s2intro" value="Assume the platform streams approximately 1 billion video views per day, with an average streamed size of 500 MB." style="text;html=1;fontSize=12;align=left;verticalAlign=top;fontColor=#000000;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="608" width="750" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_h1" value="Step" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="642" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_h2" value="Value" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="642" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_r1c1" value="Daily Data Transfer = 1 Billion x 500 MB" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="676" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_r1c2" value="500 PB / day" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="676" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_r2c1" value="Bandwidth = 500 PB / 86,400 seconds" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="710" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_r2c2" value="approx. 46 Tb/s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="710" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2_r3c1" value="Estimated Bandwidth" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="744" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_r3c2" value="~46 Tb/s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="744" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s2note" value="Note: Most of this bandwidth is handled through geographically distributed CDNs rather than the origin servers." style="text;html=1;fontSize=11;fontStyle=2;align=left;verticalAlign=top;fontColor=#000000;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="782" width="700" height="26" as="geometry" />
+        </mxCell>
+
+        <!-- 3.3 Server Estimation -->
+        <mxCell id="s3title" value="3.3 Server Estimation" style="text;html=1;fontSize=15;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="825" width="400" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s3intro" value="Assume a single streaming server can handle approximately 50,000 concurrent streaming sessions." style="text;html=1;fontSize=12;align=left;verticalAlign=top;fontColor=#000000;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="853" width="750" height="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_h1" value="Step" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="883" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_h2" value="Value" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="883" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_r1c1" value="Number of Streaming Servers = 100 Million / 50,000" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="917" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_r1c2" value="2,000 Servers" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="917" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s3_r2c1" value="Estimated Streaming Servers (excluding CDN edge servers)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="951" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_r2c2" value="2,000 Servers" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="951" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <!-- 3.4 RPS Estimation -->
+        <mxCell id="s4title" value="3.4 Requests Per Second (RPS) Estimation" style="text;html=1;fontSize=15;fontStyle=1;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1005" width="500" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="s4intro" value="To estimate the traffic handled by the platform, calculate the average number of streaming requests processed every second. Assume Netflix serves 1 billion video play requests per day." style="text;html=1;fontSize=12;align=left;verticalAlign=top;fontColor=#000000;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1033" width="750" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4_h1" value="Step" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1078" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_h2" value="Value" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E6E6E6;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1078" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4_r1c1" value="RPS = 1 Billion / 86,400" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1112" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_r1c2" value="approx. 11,574 req/s (~11.5K RPS)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1112" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4_r2c1" value="Estimated Traffic" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1146" width="470" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_r2c2" value="~11.5K RPS (higher at peak)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#D9D9D9;strokeColor=#000000;fontColor=#000000;fontStyle=1;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1146" width="230" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4note" value="Note: This is an average estimation. During peak hours (evenings, weekends, or new content releases), actual RPS can be several times higher, so the system should be designed to handle sudden traffic spikes efficiently." style="text;html=1;fontSize=11;fontStyle=2;align=left;verticalAlign=top;fontColor=#000000;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1184" width="750" height="40" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
